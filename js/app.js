@@ -20,7 +20,7 @@ function handleClickCloseBtn() {
   var closes = document.getElementsByClassName('close');
 
   for (var i = 0; i < closes.length; ++i) {
-    closes[i].onclick = function() {
+    closes[i].onclick = function () {
       var div = this.parentElement;
       div.style.display = 'none';
     }
@@ -30,10 +30,10 @@ function handleClickCloseBtn() {
 function handleClickTodoItem() {
   var todoList = document.querySelector('ul');
 
-  todoList.addEventListener('click', function(event) {
+  todoList.addEventListener('click', function (event) {
     if (event.target.tagName === 'LI') {
       // Add the toggle below this comment: event.target.classList.toggle('class-name')
-      // YOUR CODE HERE (delete this comment)
+      event.target.classList.toggle('completed-item')
     }
   }, false);
 }
